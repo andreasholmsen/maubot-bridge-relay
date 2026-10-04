@@ -4,6 +4,8 @@ A [maubot](https://github.com/maubot/maubot) plugin that relays messages between
 
 Was created since not all of us use facebook, but still have that **one** group we'd like to be part of.
 
+**New to this? Follow the [full setup guide](SETUP.md).**
+
 ![Architecture](./relay.png)
 
 ## Features
