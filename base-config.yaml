@@ -1,0 +1,35 @@
+# Room IDs (Element: Room settings -> Advanced -> Internal room ID), copied exactly.
+# Newer room versions have no ":server" suffix.
+messenger_room: "!CHANGE_ME"
+signal_room: "!CHANGE_ME"
+
+# Signal -> Messenger only forwards messages starting with this
+trigger: "!m"
+
+# Shown after the sender's name, e.g. "Anna (Messenger): hi"
+messenger_label: "Messenger"
+signal_label: "Signal"
+
+# Bridge warnings (e.g. "logged out") are forwarded from these rooms
+# (your management rooms with the bridge bots; invite the relay bot there)...
+alert_rooms: []
+# ...to this room (e.g. a DM bridged to your own Signal account)
+alert_target: ""
+
+# "!health" in the Signal room or the alert room replies with bridge status
+health_command: "!health"
+# The Matrix account that is logged in to the bridges
+bridge_user: "@you:example.com"
+# Bridges to check. secret = provisioning.shared_secret from each bridge's config.yaml
+bridges:
+  - name: Signal
+    url: http://matrix-mautrix-signal:8080
+    secret: "PASTE_SHARED_SECRET"
+  - name: Messenger
+    url: http://matrix-mautrix-meta-messenger:29319
+    secret: "PASTE_SHARED_SECRET"
+
+# Reply to a forwarded message in the Signal room with this to list its Messenger reactions...
+reactions_command: "!r"
+# ...or react to it with one of these emojis (silent trigger)
+reactions_emojis: ["🔎", "🔍"]

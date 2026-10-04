@@ -1,0 +1,12 @@
+# Built plugin archives
+*.mbp
+
+# Python
+__pycache__/
+*.pyc
+
+# Local configs that may contain secrets (room IDs, shared secrets, tokens)
+*.local.yaml
+*.local.yml
+vars.yml
+.env
